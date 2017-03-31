@@ -12,6 +12,10 @@ ol, ul {
   flex-direction: row;
 }
 
+.game-board, .game-info {
+  flex: 1
+}
+
 .game-info {
   margin-left: 20px;
 }
