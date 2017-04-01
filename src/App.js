@@ -5,19 +5,19 @@ import { calculateWinner } from './helpers'
 
 class App extends React.Component {
   constructor() {
-  super();
-  this.state = {
-    history: [{
-      squares: Array(9).fill(null)
-    }],
+    super()
+    this.state = {
+      history: [{
+        squares: Array(9).fill(null)
+      }],
       xIsNext: true
     }
   }
-  
+
   handleClick(i) {
-    const history = this.state.history;
-    const current = history[history.length - 1];
-    const squares = current.squares.slice();
+    const history = this.state.history
+    const current = history[history.length - 1]
+    const squares = current.squares.slice()
     if (calculateWinner(squares) || squares[i]) {
       return
     }
@@ -29,33 +29,42 @@ class App extends React.Component {
       xIsNext: !this.state.xIsNext,
     })
   }
-  
+
   render() {
-    const history = this.state.history;
-    const current = history[history.length - 1];
+    const history = this.state.history
+    const current = history[history.length - 1]
     const winner = calculateWinner(current.squares)
 
     let status
     if (winner) {
-      status = 'Winner: ' + winner;
+      status = 'Winner: ' + winner
     } else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O')
     }
+
+    const moves = history.map((step, move) => {
+      const desc = move ? 'Move #' + move : 'Game start'
+      return (
+        <li>
+          <a href="#" onClick={() => this.jumpTo(move)}>{desc}</a>
+        </li>
+      )
+    })
     return (
       <div className="game">
         <div className="game-board">
-          <Board 
+          <Board
             squares={current.squares}
             onClick={(i) => this.handleClick(i)}
           />
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{/* TODO */}</ol>
+          <ol>{moves}</ol>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
