@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "react-dom": "^15.6.0"
     "react": "^15.6.0",
-    "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "eslint": "^3.18.0",
