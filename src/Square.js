@@ -3,14 +3,14 @@ import './Square.css'
 
 class Square extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {
-      value: null,
+      value: null
     }
   }
   render() {
     return (
-      <button className="square" onClick={() => this.props.onClick()}>
+      <button className='square' onClick={() => this.props.onClick()}>
         {this.props.value}
       </button>
     )
