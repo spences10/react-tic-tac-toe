@@ -26,3 +26,23 @@
     transform: rotate(360deg);
   }
 }
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-board,
+.game-info {
+  flex-basis: auto;
+}
+
+.game-info {
+  margin-left: 20px;
+}
