@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Board from './Board'
-import { calculateWinner } from './helpers'
-import logo from './logo.svg'
+import { calculateWinner } from '../helpers'
+import logo from '../logo.svg'
 import './App.css'
 
 class App extends Component {
