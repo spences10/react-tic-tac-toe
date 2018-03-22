@@ -5,17 +5,14 @@ import logo from '../logo.svg'
 import './App.css'
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      history: [
-        {
-          squares: Array(9).fill(null)
-        }
-      ],
-      xIsNext: true,
-      stepNumber: 0
-    }
+  state = {
+    history: [
+      {
+        squares: Array(9).fill(null)
+      }
+    ],
+    xIsNext: true,
+    stepNumber: 0
   }
 
   jumpTo(step) {
