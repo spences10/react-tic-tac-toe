@@ -8,7 +8,6 @@ import Board from './Board'
 import { calculateWinner } from '../helpers'
 
 import logo from '../logo.svg'
-import './App.css'
 
 const AppWrapper = styled.div`
   text-align: center;
@@ -48,6 +47,20 @@ const AppIntro = styled.p`
   code {
     font-size: 1.3rem;
   }
+`
+
+const GameWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
+
+const GameBoard = styled.div`
+  flex-basis: auto;
+`
+
+const GameInfo = styled.div`
+  flex-basis: auto;
 `
 
 class App extends Component {
@@ -135,18 +148,18 @@ class App extends Component {
               </code>.
             </underline>
           </AppIntro>
-          <div className="game">
-            <div className="game-board">
+          <GameWrapper>
+            <GameBoard>
               <Board
                 squares={current.squares}
                 onClick={i => this.handleClick(i)}
               />
-            </div>
-            <div className="game-info">
+            </GameBoard>
+            <GameInfo>
               <div>{status}</div>
               <ol>{moves}</ol>
-            </div>
-          </div>
+            </GameInfo>
+          </GameWrapper>
           <ThemeSelect handleThemeChange={this.handleThemeChange} />
         </AppWrapper>
       </ThemeProvider>
