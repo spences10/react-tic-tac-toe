@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
 
-import { theme1, theme2, Button } from '../theme/globalStyle'
+import {
+  theme1,
+  theme2,
+  Button,
+  GlobalStyle
+} from '../theme/globalStyle'
 import ThemeSelect from './ThemeSelect'
 
 import Board from './Board'
+
 import { calculateWinner } from '../helpers'
 
 import logo from '../logo.svg'
@@ -134,6 +140,7 @@ class App extends Component {
     return (
       <ThemeProvider theme={this.state.theme}>
         <AppWrapper>
+          <GlobalStyle />
           <AppHeader>
             <AppLogo src={logo} className="App-logo" alt="logo" />
             <AppTitle>React tic-tac-toe</AppTitle>
@@ -143,7 +150,8 @@ class App extends Component {
             <underline>
               <code>
                 https://facebook.github.io/react/tutorial/tutorial.html
-              </code>.
+              </code>
+              .
             </underline>
           </AppIntro>
           <GameWrapper>
