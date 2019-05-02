@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
     `gatsby-mdx`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,

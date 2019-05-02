@@ -1,5 +1,5 @@
+import styled from '@emotion/styled'
 import React from 'react'
-import styled from 'styled-components'
 
 const Select = styled.select`
   margin: 2rem 0.5rem;
