@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import React from 'react';
+import styled from '@emotion/styled'
+import React, { useState } from 'react'
 
 const StyledSquare = styled.button`
   background: #fff;
@@ -19,12 +19,6 @@ const StyledSquare = styled.button`
   }
 `
 
-const Square = ({ value, onClick }) => {
-  return (
-    <StyledSquare onClick={() => onClick()}>{value}</StyledSquare>
-  )
-}
-
 const BoardWrapper = styled.div`
   margin: 1rem;
 `
@@ -37,12 +31,24 @@ const BoardRow = styled.div`
   }
 `
 
+const Square = ({ value, onClick }) => {
+  return <StyledSquare onClick={onClick}>{value}</StyledSquare>
+}
+
 const Board = () => {
+  const [squares, setSquares] = useState(Array(9).fill(null))
+  const [isNext, setNext] = useState(true)
+
   const renderSquare = i => {
     return (
       <Square
-        // value={this.props.squares[i]}
-        // onClick={() => this.props.onClick(i)}
+        value={squares[i]}
+        onClick={() => {
+          const nextSquares = squares.slice()
+          nextSquares[i] = isNext ? 'x' : 'o'
+          setNext(!isNext)
+          setSquares(nextSquares)
+        }}
       />
     )
   }
