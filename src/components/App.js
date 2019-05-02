@@ -123,22 +123,13 @@ class App extends Component {
     })
 
     return (
-      <div>
+      <>
         <AppWrapper>
           <GlobalStyle />
           <AppHeader>
             <AppLogo src={logo} className="App-logo" alt="logo" />
             <AppTitle>React tic-tac-toe</AppTitle>
           </AppHeader>
-          <AppIntro>
-            Follow along of the tutorial{' '}
-            <underline>
-              <code>
-                https://facebook.github.io/react/tutorial/tutorial.html
-              </code>
-              .
-            </underline>
-          </AppIntro>
           <GameWrapper>
             <GameBoard>
               <Board
@@ -152,7 +143,7 @@ class App extends Component {
             </GameInfo>
           </GameWrapper>
         </AppWrapper>
-      </div>
+      </>
     )
   }
 }
