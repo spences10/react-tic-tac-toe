@@ -3,12 +3,7 @@ import styled from '@emotion/styled'
 import React, { Component } from 'react'
 import { calculateWinner } from '../helpers'
 import logo from '../images/logo.svg'
-import {
-  Button,
-  GlobalStyle,
-  theme1,
-  theme2,
-} from '../theme/globalStyle'
+import { Button, GlobalStyle, theme1 } from '../theme/globalStyle'
 import Board from './Board'
 
 const AppWrapper = styled.div`
@@ -104,12 +99,6 @@ class App extends Component {
       xIsNext: !this.state.xIsNext,
       stepNumber: history.length,
     })
-  }
-
-  handleThemeChange = e => {
-    let theme = e.target.value
-    theme === 'theme1' ? (theme = theme1) : (theme = theme2)
-    this.setState({ theme })
   }
 
   render() {
