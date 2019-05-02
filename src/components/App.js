@@ -1,7 +1,8 @@
-import { keyframes, ThemeProvider } from '@emotion/core'
+import { keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 import React, { Component } from 'react'
 import { calculateWinner } from '../helpers'
+import logo from '../images/logo.svg'
 import {
   Button,
   GlobalStyle,
@@ -9,7 +10,6 @@ import {
   theme2,
 } from '../theme/globalStyle'
 import Board from './Board'
-import ThemeSelect from './ThemeSelect'
 
 const AppWrapper = styled.div`
   text-align: center;
@@ -134,7 +134,7 @@ class App extends Component {
     })
 
     return (
-      <ThemeProvider theme={this.state.theme}>
+      <div>
         <AppWrapper>
           <GlobalStyle />
           <AppHeader>
@@ -162,9 +162,8 @@ class App extends Component {
               <ol>{moves}</ol>
             </GameInfo>
           </GameWrapper>
-          <ThemeSelect handleThemeChange={this.handleThemeChange} />
         </AppWrapper>
-      </ThemeProvider>
+      </div>
     )
   }
 }
