@@ -1,5 +1,5 @@
+import styled from '@emotion/styled'
 import React from 'react'
-import styled from 'styled-components'
 
 const StyledSquare = styled.button`
   background: #fff;
@@ -23,7 +23,7 @@ class Square extends React.Component {
   constructor() {
     super()
     this.state = {
-      value: null
+      value: null,
     }
   }
   render() {

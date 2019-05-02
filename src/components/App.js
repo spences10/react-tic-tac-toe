@@ -1,19 +1,15 @@
+import { keyframes } from '@emotion/core'
+import styled from '@emotion/styled'
 import React, { Component } from 'react'
-import styled, { keyframes, ThemeProvider } from 'styled-components'
-
+import { calculateWinner } from '../helpers'
+import logo from '../images/logo.svg'
 import {
+  Button,
+  GlobalStyle,
   theme1,
   theme2,
-  Button,
-  GlobalStyle
 } from '../theme/globalStyle'
-import ThemeSelect from './ThemeSelect'
-
 import Board from './Board'
-
-import { calculateWinner } from '../helpers'
-
-import logo from '../logo.svg'
 
 const AppWrapper = styled.div`
   text-align: center;
@@ -73,18 +69,18 @@ class App extends Component {
   state = {
     history: [
       {
-        squares: Array(9).fill(null)
-      }
+        squares: Array(9).fill(null),
+      },
     ],
     xIsNext: true,
     stepNumber: 0,
-    theme: theme1
+    theme: theme1,
   }
 
   jumpTo(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: step % 2 ? false : true
+      xIsNext: step % 2 ? false : true,
     })
   }
 
@@ -102,11 +98,11 @@ class App extends Component {
     this.setState({
       history: history.concat([
         {
-          squares: squares
-        }
+          squares: squares,
+        },
       ]),
       xIsNext: !this.state.xIsNext,
-      stepNumber: history.length
+      stepNumber: history.length,
     })
   }
 
@@ -138,7 +134,7 @@ class App extends Component {
     })
 
     return (
-      <ThemeProvider theme={this.state.theme}>
+      <div>
         <AppWrapper>
           <GlobalStyle />
           <AppHeader>
@@ -166,9 +162,8 @@ class App extends Component {
               <ol>{moves}</ol>
             </GameInfo>
           </GameWrapper>
-          <ThemeSelect handleThemeChange={this.handleThemeChange} />
         </AppWrapper>
-      </ThemeProvider>
+      </div>
     )
   }
 }
