@@ -15,8 +15,12 @@
     "@emotion/styled": "10.0.10",
     "@mdx-js/mdx": "1.0.16",
     "@mdx-js/react": "1.0.16",
+<<<<<<< HEAD
     "emotion-theming": "^10.0.10",
     "gatsby": "2.3.36",
+=======
+    "gatsby": "2.4.0",
+>>>>>>> 12be7b15302415756b97af2ae88260bb1094ccd1
     "gatsby-mdx": "0.6.3",
     "gatsby-plugin-emotion": "4.0.6",
     "gatsby-plugin-manifest": "2.1.0",
