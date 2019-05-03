@@ -1,3 +1,13 @@
 import App from '../components/App'
+import { ThemeProvider } from 'emotion-theming'
+import { Button, GlobalStyle, theme1 } from '../theme/globalStyle'
 
-<App />
+<ThemeProvider theme={theme1}>
+  <App />
+</ThemeProvider>
+
+Follow along of the [tutorial]
+
+<!-- Links -->
+
+[tutorial]: https://facebook.github.io/react/tutorial/tutorial.html

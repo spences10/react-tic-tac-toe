@@ -3,12 +3,7 @@ import styled from '@emotion/styled'
 import React, { Component } from 'react'
 import { calculateWinner } from '../helpers'
 import logo from '../images/logo.svg'
-import {
-  Button,
-  GlobalStyle,
-  theme1,
-  theme2,
-} from '../theme/globalStyle'
+import { Button, GlobalStyle, theme1 } from '../theme/globalStyle'
 import Board from './Board'
 
 const AppWrapper = styled.div`
@@ -69,18 +64,18 @@ class App extends Component {
   state = {
     history: [
       {
-        squares: Array(9).fill(null),
-      },
+        squares: Array(9).fill(null)
+      }
     ],
     xIsNext: true,
     stepNumber: 0,
-    theme: theme1,
+    theme: theme1
   }
 
   jumpTo(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: step % 2 ? false : true,
+      xIsNext: step % 2 ? false : true
     })
   }
 
@@ -98,18 +93,12 @@ class App extends Component {
     this.setState({
       history: history.concat([
         {
-          squares: squares,
-        },
+          squares: squares
+        }
       ]),
       xIsNext: !this.state.xIsNext,
-      stepNumber: history.length,
+      stepNumber: history.length
     })
-  }
-
-  handleThemeChange = e => {
-    let theme = e.target.value
-    theme === 'theme1' ? (theme = theme1) : (theme = theme2)
-    this.setState({ theme })
   }
 
   render() {
@@ -134,36 +123,25 @@ class App extends Component {
     })
 
     return (
-      <div>
-        <AppWrapper>
-          <GlobalStyle />
-          <AppHeader>
-            <AppLogo src={logo} className="App-logo" alt="logo" />
-            <AppTitle>React tic-tac-toe</AppTitle>
-          </AppHeader>
-          <AppIntro>
-            Follow along of the tutorial{' '}
-            <underline>
-              <code>
-                https://facebook.github.io/react/tutorial/tutorial.html
-              </code>
-              .
-            </underline>
-          </AppIntro>
-          <GameWrapper>
-            <GameBoard>
-              <Board
-                squares={current.squares}
-                onClick={i => this.handleClick(i)}
-              />
-            </GameBoard>
-            <GameInfo>
-              <div>{status}</div>
-              <ol>{moves}</ol>
-            </GameInfo>
-          </GameWrapper>
-        </AppWrapper>
-      </div>
+      <AppWrapper>
+        <GlobalStyle />
+        <AppHeader>
+          <AppLogo src={logo} className="App-logo" alt="logo" />
+          <AppTitle>React tic-tac-toe</AppTitle>
+        </AppHeader>
+        <GameWrapper>
+          <GameBoard>
+            <Board
+              squares={current.squares}
+              onClick={i => this.handleClick(i)}
+            />
+          </GameBoard>
+          <GameInfo>
+            <div>{status}</div>
+            <ol>{moves}</ol>
+          </GameInfo>
+        </GameWrapper>
+      </AppWrapper>
     )
   }
 }
