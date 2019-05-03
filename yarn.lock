@@ -3516,15 +3516,6 @@ emojis-list@^2.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
-emotion-theming@^10.0.10:
-  version "10.0.10"
-  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.10.tgz#efe8751119751bdc70fdc1795fe4cde0fb0cf14c"
-  integrity sha512-E4SQ3Y91avxxydDgubi/po/GaC5MM1XHm8kcClKg1PA/TeOye0PiLBzAzlgt9dBzDRV9+qHDunsayPvzVYIYng==
-  dependencies:
-    "@emotion/weak-memoize" "0.2.2"
-    hoist-non-react-statics "^3.3.0"
-    object-assign "^4.1.1"
-
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
@@ -4573,10 +4564,10 @@ gatsby-telemetry@^1.0.9:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.4.0.tgz#8315c73957928af15bb3c15e93aebd19d7204853"
-  integrity sha512-kWYpEb+V/7KJC7yrznneYWv1nQdcaTdAOEtNAnk99pgC6vnDETgk2AVVh83AhJXmx5nFKcojINwj4hofF5Vj/g==
+gatsby@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.4.1.tgz#5e199df5afa0285093fcf68809ef4160b1016768"
+  integrity sha512-KfpsYh79ZLo0UDlu8Nvjv4vH1Ru4arux2wg0lF9vk85DliNJ90+eGhKURX8Diw5MjKOtKXC9gVgkjiVK2VjGSg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
