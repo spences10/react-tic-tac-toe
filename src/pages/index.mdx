@@ -1,8 +1,12 @@
 import App from '../components/App'
+import { ThemeProvider } from 'emotion-theming'
+import { Button, GlobalStyle, theme1 } from '../theme/globalStyle'
+
+<ThemeProvider theme={theme1}>
+  <App />
+</ThemeProvider>
 
 Follow along of the [tutorial]
-
-<App />
 
 <!-- Links -->
 

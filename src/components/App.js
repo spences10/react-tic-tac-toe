@@ -1,6 +1,5 @@
 import { keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
-import { ThemeProvider } from 'emotion-theming'
 import React, { Component } from 'react'
 import { calculateWinner } from '../helpers'
 import logo from '../images/logo.svg'
@@ -124,27 +123,25 @@ class App extends Component {
     })
 
     return (
-      <ThemeProvider theme={theme1}>
-        <AppWrapper>
-          <GlobalStyle />
-          <AppHeader>
-            <AppLogo src={logo} className="App-logo" alt="logo" />
-            <AppTitle>React tic-tac-toe</AppTitle>
-          </AppHeader>
-          <GameWrapper>
-            <GameBoard>
-              <Board
-                squares={current.squares}
-                onClick={i => this.handleClick(i)}
-              />
-            </GameBoard>
-            <GameInfo>
-              <div>{status}</div>
-              <ol>{moves}</ol>
-            </GameInfo>
-          </GameWrapper>
-        </AppWrapper>
-      </ThemeProvider>
+      <AppWrapper>
+        <GlobalStyle />
+        <AppHeader>
+          <AppLogo src={logo} className="App-logo" alt="logo" />
+          <AppTitle>React tic-tac-toe</AppTitle>
+        </AppHeader>
+        <GameWrapper>
+          <GameBoard>
+            <Board
+              squares={current.squares}
+              onClick={i => this.handleClick(i)}
+            />
+          </GameBoard>
+          <GameInfo>
+            <div>{status}</div>
+            <ol>{moves}</ol>
+          </GameInfo>
+        </GameWrapper>
+      </AppWrapper>
     )
   }
 }
