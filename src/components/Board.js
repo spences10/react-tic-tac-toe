@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const StyledSquare = styled.button`
   background: #fff;
