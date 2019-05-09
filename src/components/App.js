@@ -1,6 +1,5 @@
-import { keyframes } from '@emotion/core'
-import styled from '@emotion/styled'
 import React, { Component } from 'react'
+import styled, { keyframes } from 'styled-components'
 import { calculateWinner } from '../helpers'
 import logo from '../images/logo.svg'
 import { Button, GlobalStyle, theme1 } from '../theme/globalStyle'
