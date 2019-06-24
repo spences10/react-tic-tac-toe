@@ -1,6 +1,6 @@
 {
   "name": "react-tic-tac-toe",
-  "version": "1.1.67",
+  "version": "1.1.68",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -32,7 +32,7 @@
     "styled-components": "4.3.2"
   },
   "devDependencies": {
-    "husky": "2.4.1",
+    "husky": "2.5.0",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1"
   }
