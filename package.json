@@ -1,6 +1,6 @@
 {
   "name": "react-tic-tac-toe",
-  "version": "1.1.187",
+  "version": "1.1.188",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -19,7 +19,7 @@
     "@mdx-js/mdx": "1.4.0",
     "@mdx-js/react": "1.4.0",
     "babel-plugin-styled-components": "1.10.6",
-    "gatsby": "2.14.3",
+    "gatsby": "2.14.4",
     "gatsby-plugin-manifest": "2.2.9",
     "gatsby-plugin-mdx": "1.0.33",
     "gatsby-plugin-offline": "2.2.10",
