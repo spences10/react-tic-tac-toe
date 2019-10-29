@@ -1,14 +1,13 @@
 {
   "name": "react-tic-tac-toe",
-  "version": "1.1.241",
+  "version": "1.1.246",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "gatsby build",
     "dev": "gatsby develop -p 6677 -o",
+    "build": "gatsby build",
     "format": "pretty-quick",
-    "start": "npm run develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve -p 9999 -o"
   },
   "husky": {
     "hooks": {
@@ -19,15 +18,15 @@
     "@mdx-js/mdx": "1.5.1",
     "@mdx-js/react": "1.5.1",
     "babel-plugin-styled-components": "1.10.6",
-    "gatsby": "2.16.3",
-    "gatsby-plugin-manifest": "2.2.23",
-    "gatsby-plugin-mdx": "1.0.52",
-    "gatsby-plugin-offline": "3.0.16",
+    "gatsby": "2.17.6",
+    "gatsby-plugin-manifest": "2.2.25",
+    "gatsby-plugin-mdx": "1.0.54",
+    "gatsby-plugin-offline": "3.0.17",
     "gatsby-plugin-react-helmet": "3.1.13",
     "gatsby-plugin-styled-components": "3.1.11",
     "prop-types": "15.7.2",
-    "react": "16.10.2",
-    "react-dom": "16.10.2",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
     "react-helmet": "5.2.1",
     "styled-components": "4.4.0"
   },
