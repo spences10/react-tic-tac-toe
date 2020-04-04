@@ -1,6 +1,6 @@
 {
   "name": "react-tic-tac-toe",
-  "version": "1.1.261",
+  "version": "1.1.299",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -15,24 +15,24 @@
     }
   },
   "dependencies": {
-    "@mdx-js/mdx": "1.5.1",
-    "@mdx-js/react": "1.5.1",
-    "babel-plugin-styled-components": "1.10.6",
-    "gatsby": "2.18.5",
-    "gatsby-plugin-manifest": "2.2.30",
-    "gatsby-plugin-mdx": "1.0.58",
-    "gatsby-plugin-offline": "3.0.25",
-    "gatsby-plugin-react-helmet": "3.1.16",
-    "gatsby-plugin-styled-components": "3.1.14",
+    "@mdx-js/mdx": "1.5.8",
+    "@mdx-js/react": "1.5.8",
+    "babel-plugin-styled-components": "1.10.7",
+    "gatsby": "2.20.12",
+    "gatsby-plugin-manifest": "2.3.3",
+    "gatsby-plugin-mdx": "1.1.4",
+    "gatsby-plugin-offline": "3.1.2",
+    "gatsby-plugin-react-helmet": "3.2.1",
+    "gatsby-plugin-styled-components": "3.2.1",
     "prop-types": "15.7.2",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
     "styled-components": "4.4.1"
   },
   "devDependencies": {
-    "husky": "3.1.0",
-    "prettier": "1.19.1",
+    "husky": "4.2.3",
+    "prettier": "2.0.2",
     "pretty-quick": "2.0.1"
   }
 }
