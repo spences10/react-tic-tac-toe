@@ -15,24 +15,32 @@
     }
   },
   "dependencies": {
-    "@mdx-js/mdx": "1.5.8",
-    "@mdx-js/react": "1.5.8",
-    "babel-plugin-styled-components": "1.10.7",
-    "gatsby": "2.20.12",
-    "gatsby-plugin-manifest": "2.3.3",
-    "gatsby-plugin-mdx": "1.1.4",
-    "gatsby-plugin-offline": "3.1.2",
-    "gatsby-plugin-react-helmet": "3.2.1",
-    "gatsby-plugin-styled-components": "3.2.1",
+    "@mdx-js/mdx": "1.6.16",
+    "@mdx-js/react": "1.6.16",
+    "babel-plugin-styled-components": "1.11.1",
+    "gatsby": "2.24.56",
+    "gatsby-plugin-manifest": "2.4.28",
+    "gatsby-plugin-mdx": "1.2.39",
+    "gatsby-plugin-offline": "3.2.27",
+    "gatsby-plugin-react-helmet": "3.3.10",
+    "gatsby-plugin-styled-components": "3.3.10",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "5.2.1",
-    "styled-components": "4.4.1"
+    "react-helmet": "6.1.0",
+    "styled-components": "5.2.0"
   },
   "devDependencies": {
-    "husky": "4.2.3",
-    "prettier": "2.0.2",
-    "pretty-quick": "2.0.1"
+    "husky": "4.3.0",
+    "prettier": "2.1.1",
+    "pretty-quick": "3.0.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5",
+    "printWidth": 70,
+    "arrowParens": "avoid",
+    "proseWrap": "always"
   }
 }
