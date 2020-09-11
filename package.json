@@ -4,32 +4,17 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "gatsby develop -p 6677 -o",
-    "build": "gatsby build",
+    "build": "linaria -o public/styles src/**/*.js && toast incremental",
+    "prepare": "breadbox --dest public/web_modules",
     "format": "pretty-quick",
-    "serve": "gatsby serve -p 9999 -o"
+    "serve": "npx serve public"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "dependencies": {
-    "@mdx-js/mdx": "1.6.16",
-    "@mdx-js/react": "1.6.16",
-    "babel-plugin-styled-components": "1.11.1",
-    "gatsby": "2.24.56",
-    "gatsby-plugin-manifest": "2.4.28",
-    "gatsby-plugin-mdx": "1.2.39",
-    "gatsby-plugin-offline": "3.2.27",
-    "gatsby-plugin-react-helmet": "3.3.10",
-    "gatsby-plugin-styled-components": "3.3.10",
-    "prop-types": "15.7.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-helmet": "6.1.0",
-    "styled-components": "5.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "husky": "4.3.0",
     "prettier": "2.1.1",
@@ -42,5 +27,18 @@
     "printWidth": 70,
     "arrowParens": "avoid",
     "proseWrap": "always"
+  },
+  "snowpack": {
+    "installOptions": {
+      "alias": {
+        "react": "preact/compat"
+      }
+    },
+    "knownEntrypoints": [
+      "preact",
+      "preact/hooks",
+      "preact/compat",
+      "react-helmet"
+    ]
   }
 }
