@@ -123,8 +123,10 @@ export const Game = () => {
   }
 
   return (
-    <div css={{ display: 'inline-block' }}>
-      <div css={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div style={{ display: 'inline-block' }}>
+      <div
+        style={{ display: 'flex', justifyContent: 'space-between' }}
+      >
         <div>Next turn: {turn}</div>
         <div>{status === 'win' ? `${turn} won!` : null}</div>
         <button onClick={reset} type="button">
@@ -138,7 +140,7 @@ export const Game = () => {
 
 function Grid({ grid, handleClick }) {
   return (
-    <div css={{ display: 'inline-block' }}>
+    <div style={{ display: 'inline-block' }}>
       <div
         style={{
           backgroundColor: '#444',
@@ -166,10 +168,10 @@ function Grid({ grid, handleClick }) {
 
 function Cell({ value, onClick }) {
   return (
-    <div css={{ backgroundColor: '#fff', width: 100, height: 100 }}>
+    <div>
       <button
         type="button"
-        css={{ width: '100%', height: '100%' }}
+        style={{ width: '100%', height: '100%' }}
         onClick={onClick}
       >
         {value}
